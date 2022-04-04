@@ -21,3 +21,5 @@ main()
         console.log(e);
         process.exit(1);
     })
+
+// WavePortal address deployed: 0x99596d2392F17284A74ceff16efDEc682BF08086
