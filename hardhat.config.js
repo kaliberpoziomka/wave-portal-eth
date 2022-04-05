@@ -19,7 +19,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 dotenv.config();
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.7",
   networks: {
     rinkeby: {
       url: `${process.env.RINKEBY_ALCHEMY_WAVE_PROJECT_URL}`,

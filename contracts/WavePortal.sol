@@ -28,15 +28,17 @@ contract WavePortal {
         waves.push(Wave(msg.sender, message_, block.timestamp));
 
         emit NewWave(msg.sender, block.timestamp, message_);
+    }
 
+    function payRandomAddress(address addr_) public {
         // Give everyone who waves some ETH
-        uint256 prizeAmount = 0.00001 ether;
+        uint256 prizeAmount = 0.0001 ether;
 
         require(
             prizeAmount <= address(this).balance,
             "Trying to withdraw more money than the contract has!"
         );
-        (bool success, ) = (msg.sender).call{value: prizeAmount}("");
+        (bool success, ) = (addr_).call{value: prizeAmount}("");
         require(success, "Failed to withdraw moeny from contract.");
     }
 

@@ -8,7 +8,7 @@ const main = async () => {
 
     const waveContractFactory = await ethers.getContractFactory("WavePortal");
     const waveContract = await waveContractFactory.deploy({
-        value: ethers.utils.parseEther("0.001"),
+        value: ethers.utils.parseEther("0.01"),
     });
     await waveContract.deployed();
 
@@ -24,4 +24,4 @@ main()
         process.exit(1);
     })
 
-// WavePortal address deployed: 0x8E78c63B9da82Fa158a4D12E66daa789A3F75EC0
+// WavePortal address deployed: 0x636F4361108478dF1682408dAE20De6ce1F46ea5
