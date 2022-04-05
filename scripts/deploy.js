@@ -7,7 +7,9 @@ const main = async () => {
     console.log("Account balance: ", accountBalance.toString());
 
     const waveContractFactory = await ethers.getContractFactory("WavePortal");
-    const waveContract = await waveContractFactory.deploy();
+    const waveContract = await waveContractFactory.deploy({
+        value: ethers.utils.parseEther("0.001"),
+    });
     await waveContract.deployed();
 
     console.log("WavePortal address: ", waveContract.address);
@@ -22,4 +24,4 @@ main()
         process.exit(1);
     })
 
-// WavePortal address deployed: 0x99596d2392F17284A74ceff16efDEc682BF08086
+// WavePortal address deployed: 0x8E78c63B9da82Fa158a4D12E66daa789A3F75EC0
