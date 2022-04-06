@@ -1,4 +1,5 @@
 const {ethers} = require("hardhat");
+
 const main = async () => {
     const [deployer] = await ethers.getSigners() ;
     const accountBalance = await deployer.getBalance();
@@ -24,4 +25,4 @@ main()
         process.exit(1);
     })
 
-// WavePortal address deployed: 0x636F4361108478dF1682408dAE20De6ce1F46ea5
+// WavePortal address deployed: 0xa2E3162f83Ce5063B84e50EA2Bb8D5BaD2f4eff2
